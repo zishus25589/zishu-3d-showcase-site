@@ -1,30 +1,46 @@
-
 import SectionHeading from "../ui/SectionHeading";
 import SkillBadge from "../ui/SkillBadge";
-
-const skills = [
-  { name: "JavaScript", level: 95 },
-  { name: "TypeScript", level: 90 },
-  { name: "React", level: 95 },
-  { name: "Node.js", level: 85 },
-  { name: "Next.js", level: 80 },
-  { name: "Three.js", level: 80 },
-  { name: "CSS/SCSS", level: 90 },
-  { name: "Tailwind CSS", level: 95 },
-  { name: "MongoDB", level: 75 },
-  { name: "PostgreSQL", level: 80 },
-  { name: "Git", level: 90 },
-  { name: "Docker", level: 70 },
-];
-
+const skills = [{
+  name: "JavaScript",
+  level: 95
+}, {
+  name: "TypeScript",
+  level: 90
+}, {
+  name: "React",
+  level: 95
+}, {
+  name: "Node.js",
+  level: 85
+}, {
+  name: "Next.js",
+  level: 80
+}, {
+  name: "Three.js",
+  level: 80
+}, {
+  name: "CSS/SCSS",
+  level: 90
+}, {
+  name: "Tailwind CSS",
+  level: 95
+}, {
+  name: "MongoDB",
+  level: 75
+}, {
+  name: "PostgreSQL",
+  level: 80
+}, {
+  name: "Git",
+  level: 90
+}, {
+  name: "Docker",
+  level: 70
+}];
 const About = () => {
-  return (
-    <section id="about" className="section-padding bg-muted/10">
+  return <section id="about" className="section-padding bg-muted/10">
       <div className="container mx-auto px-4">
-        <SectionHeading
-          title="About Me"
-          subtitle="Get to know more about me and my skills"
-        />
+        <SectionHeading title="About Me" subtitle="Get to know more about me and my skills" />
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-4">
@@ -51,7 +67,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="border-l-2 border-primary pl-4 pb-4">
                   <h4 className="font-medium">Senior Frontend Developer at TechCorp</h4>
-                  <p className="text-muted-foreground">2021 - Present</p>
+                  <p className="text-muted-foreground">2024 - Present</p>
                   <p className="text-sm text-muted-foreground mt-2">
                     Leading the frontend development team and architecting scalable React applications.
                   </p>
@@ -71,9 +87,7 @@ const About = () => {
           <div>
             <h3 className="text-xl font-medium text-primary mb-4">My Skills</h3>
             <div className="flex flex-wrap gap-3">
-              {skills.map((skill) => (
-                <SkillBadge key={skill.name} name={skill.name} level={skill.level} />
-              ))}
+              {skills.map(skill => <SkillBadge key={skill.name} name={skill.name} level={skill.level} />)}
             </div>
             
             <div className="mt-10">
@@ -83,21 +97,21 @@ const About = () => {
                 <div className="border-l-2 border-primary pl-4 pb-4">
                   <h4 className="font-medium">Master's in Computer Science</h4>
                   <p className="text-muted-foreground">University of Technology</p>
-                  <p className="text-muted-foreground">2017 - 2019</p>
+                  <p className="text-muted-foreground">2023-2025</p>
                 </div>
                 
                 <div className="border-l-2 border-primary pl-4">
-                  <h4 className="font-medium">Bachelor's in Computer Science</h4>
+                  <h4 className="font-medium">
+                </h4>
                   <p className="text-muted-foreground">University of Technology</p>
-                  <p className="text-muted-foreground">2013 - 2017</p>
+                  <p className="text-muted-foreground">
+                </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
