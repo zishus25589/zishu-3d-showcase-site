@@ -1,0 +1,21 @@
+
+{
+  "glyphs": {
+    "Z": {"ha": 600, "x_min": 70, "x_max": 531, "o": "m 70 0 l 70 68 l 398 566 l 85 566 l 85 634 l 531 634 l 531 566 l 203 68 l 531 68 l 531 0 l 70 0 z"},
+    "i": {"ha": 278, "x_min": 69, "x_max": 209, "o": "m 139 634 l 209 634 l 209 0 l 69 0 l 69 634 l 139 634 z m 0 200 l 139 834 l 209 834 l 209 634 l 69 634 l 69 834 l 139 834 z"},
+    "s": {"ha": 556, "x_min": 53, "x_max": 503, "o": "m 503 174 l 503 0 l 53 0 l 53 174 l 123 174 l 123 70 l 433 70 l 433 193 l 123 317 l 123 634 l 503 634 l 503 461 l 433 461 l 433 564 l 193 564 l 193 387 l 503 263 l 503 0 z"},
+    "h": {"ha": 611, "x_min": 69, "x_max": 543, "o": "m 69 0 l 69 834 l 139 834 l 139 387 l 473 387 l 473 634 l 543 634 l 543 0 l 473 0 l 473 317 l 139 317 l 139 0 l 69 0 z"},
+    "u": {"ha": 611, "x_min": 68, "x_max": 544, "o": "m 68 634 l 138 634 l 138 247 l 474 247 l 474 634 l 544 634 l 544 0 l 474 0 l 474 177 l 138 177 l 138 0 l 68 0 l 68 634 z"},
+    ".": {"ha": 278, "x_min": 69, "x_max": 209, "o": "m 69 0 l 69 150 l 209 150 l 209 0 l 69 0 z"},
+    "d": {"ha": 611, "x_min": 64, "x_max": 548, "o": "m 548 0 l 478 0 l 478 104 l 360 0 l 64 0 l 64 634 l 360 634 l 478 530 l 478 834 l 548 834 l 548 0 z m 478 177 l 478 457 l 360 564 l 134 564 l 134 70 l 360 70 l 478 177 z"},
+    "e": {"ha": 556, "x_min": 48, "x_max": 508, "o": "m 278 -12 l 48 -12 l 48 634 l 508 634 l 508 461 l 118 461 l 118 387 l 438 387 l 438 317 l 118 317 l 118 70 l 508 70 l 508 0 l 278 -12 z m 118 531 l 438 531 l 438 564 l 118 564 l 118 531 z"}
+  },
+  "familyName": "Inter",
+  "ascender": 968,
+  "descender": -241,
+  "underlinePosition": -105,
+  "underlineThickness": 58,
+  "boundingBox": {"yMin": -553, "xMin": -350, "yMax": 1401, "xMax": 1499},
+  "resolution": 1000,
+  "original_font_information": {"format": 0, "copyright": "Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)", "fontFamily": "Inter", "fontSubfamily": "Regular", "uniqueID": "3.019;RSMS;Inter-Regular", "fullName": "Inter Regular", "version": "Version 3.019;git-0a5106e0b", "postScriptName": "Inter-Regular", "trademark": "", "manufacturer": "The Inter Project Authors", "designer": "Rasmus Andersson", "manufacturerURL": "https://github.com/rsms/inter", "designerURL": "https://rsms.me/", "licence": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL", "licenceURL": "http://scripts.sil.org/OFL"}
+}
