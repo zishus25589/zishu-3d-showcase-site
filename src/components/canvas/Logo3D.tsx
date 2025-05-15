@@ -9,8 +9,10 @@ const Logo3D = () => {
   
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
-    if (textRef.current) {
-      textRef.current.material.color.setHSL(0.6, 0.8, 0.5 + Math.sin(time) * 0.2);
+    if (textRef.current && textRef.current.material) {
+      // Ensure material is a MeshStandardMaterial before accessing color
+      const material = textRef.current.material as THREE.MeshStandardMaterial;
+      material.color.setHSL(0.6, 0.8, 0.5 + Math.sin(time) * 0.2);
     }
   });
 
