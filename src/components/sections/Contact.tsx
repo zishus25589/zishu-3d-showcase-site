@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import SectionHeading from "../ui/SectionHeading";
 import { useToast } from "@/components/ui/use-toast";
+import { MapPin, Mail, Globe, Sparkles } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -57,7 +58,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding relative">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-accent/5 rounded-full filter blur-xl"></div>
+      </div>
+      
       <div className="container mx-auto px-4">
         <SectionHeading
           title="Get In Touch"
@@ -66,15 +72,17 @@ const Contact = () => {
         
         <div className="max-w-3xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10">
-            <div>
+            <div className="relative">
+              <div className="absolute -top-6 -left-6">
+                <Sparkles className="text-primary animate-pulse" size={20} />
+              </div>
+              
               <h3 className="text-xl font-medium mb-4 text-primary">Contact Info</h3>
               
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-primary">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                    </svg>
+                <div className="flex items-center space-x-3 group">
+                  <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
@@ -82,16 +90,13 @@ const Contact = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-3">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-primary">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                    </svg>
+                <div className="flex items-center space-x-3 group">
+                  <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary/20 transition-colors">
+                    <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p>San Francisco, California</p>
+                    <p>Delhi, India</p>
                   </div>
                 </div>
                 
@@ -108,7 +113,7 @@ const Contact = () => {
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-muted p-3 rounded-full hover:bg-primary/20 transition-colors"
+                        className="bg-muted p-3 rounded-full hover:bg-primary/20 transition-colors transform hover:scale-110 hover:rotate-6 duration-300"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +144,11 @@ const Contact = () => {
               </div>
             </div>
             
-            <div>
+            <div className="relative">
+              <div className="absolute -top-2 -right-2 w-5 h-5">
+                <div className="absolute inset-0 bg-primary rounded-full opacity-70 animate-ping"></div>
+                <div className="absolute inset-1 bg-primary rounded-full"></div>
+              </div>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                   <FormField
@@ -147,9 +156,9 @@ const Contact = () => {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel className="text-primary">Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} />
+                          <Input placeholder="Your name" {...field} className="focus:border-primary/50 focus:ring-primary/30" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -161,9 +170,9 @@ const Contact = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel className="text-primary">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your email" {...field} />
+                          <Input placeholder="Your email" {...field} className="focus:border-primary/50 focus:ring-primary/30" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -175,9 +184,9 @@ const Contact = () => {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Subject</FormLabel>
+                        <FormLabel className="text-primary">Subject</FormLabel>
                         <FormControl>
-                          <Input placeholder="Subject" {...field} />
+                          <Input placeholder="Subject" {...field} className="focus:border-primary/50 focus:ring-primary/30" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -189,11 +198,11 @@ const Contact = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel className="text-primary">Message</FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="Your message"
-                            className="min-h-[120px]"
+                            className="min-h-[120px] focus:border-primary/50 focus:ring-primary/30"
                             {...field}
                           />
                         </FormControl>
@@ -202,8 +211,13 @@ const Contact = () => {
                     )}
                   />
                   
-                  <Button type="submit" className="w-full animate-click-pulse" disabled={isSubmitting}>
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                  <Button 
+                    type="submit" 
+                    className="w-full animate-click-pulse relative overflow-hidden" 
+                    disabled={isSubmitting}
+                  >
+                    <span className="relative z-10">{isSubmitting ? "Sending..." : "Send Message"}</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
                   </Button>
                 </form>
               </Form>
