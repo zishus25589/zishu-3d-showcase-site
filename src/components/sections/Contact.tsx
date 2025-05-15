@@ -78,7 +78,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:hello@zishu.dev" className="hover:text-primary">hello@zishu.dev</a>
+                    <a href="mailto:zishuahmad96@outlook" className="hover:text-primary">zishuahmad96@outlook</a>
                   </div>
                 </div>
                 
@@ -202,7 +202,7 @@ const Contact = () => {
                     )}
                   />
                   
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  <Button type="submit" className="w-full animate-click-pulse" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>

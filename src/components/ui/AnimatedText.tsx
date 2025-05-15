@@ -1,13 +1,13 @@
 
 import { cn } from "@/lib/utils";
 
-interface AnimatedTextProps {
+interface GlowTextProps {
   text: string;
   className?: string;
   el?: keyof JSX.IntrinsicElements;
 }
 
-const AnimatedText = ({ text, className, el: Tag = "h1" }: AnimatedTextProps) => {
+const AnimatedText = ({ text, className, el: Tag = "h1" }: GlowTextProps) => {
   return (
     <Tag className={cn("overflow-hidden", className)}>
       <div className="animate-text-flicker">

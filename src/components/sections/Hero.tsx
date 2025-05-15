@@ -27,13 +27,13 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="gaming" size="lg" className="px-8 group" asChild>
+            <Button variant="gaming" size="lg" className="px-8 group animate-click-pulse" asChild>
               <a href="#projects">
                 <span>See My Work</span>
                 <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="px-8 group" asChild>
+            <Button variant="outline" size="lg" className="px-8 group animate-click-pulse" asChild>
               <a href="#contact">
                 <Gamepad2 className="mr-2 h-4 w-4" />
                 <span>Contact Me</span>
@@ -44,8 +44,8 @@ const Hero = () => {
         
         <div className="lg:w-1/2 px-4 lg:px-10">
           <GamingImage 
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
-            alt="Programmer" 
+            src="/lovable-uploads/8ed534af-8de7-4eab-8a84-c6ece5059126.png" 
+            alt="Developer at computer" 
             className="w-full max-w-md mx-auto lg:max-w-lg"
           />
         </div>

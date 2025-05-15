@@ -103,9 +103,9 @@ export default {
 					'100%': { transform: 'rotate(360deg)' },
 				},
 				'button-pulse': {
-					'0%': { boxShadow: '0 0 0 0 rgba(139, 92, 246, 0.7)' },
-					'70%': { boxShadow: '0 0 0 10px rgba(139, 92, 246, 0)' },
-					'100%': { boxShadow: '0 0 0 0 rgba(139, 92, 246, 0)' },
+					'0%': { boxShadow: '0 0 0 0 rgba(59, 195, 243, 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px rgba(59, 195, 243, 0)' },
+					'100%': { boxShadow: '0 0 0 0 rgba(59, 195, 243, 0)' },
 				},
 				'text-flicker': {
 					'0%, 100%': { opacity: '1' },
@@ -115,6 +115,11 @@ export default {
 				'pixel-border': {
 					'0%, 100%': { boxShadow: '0 0 0 3px hsl(var(--primary))' },
 					'50%': { boxShadow: '0 0 0 5px hsl(var(--accent))' },
+				},
+				'click-pulse': {
+					'0%': { boxShadow: '0 0 0 0 rgba(59, 195, 243, 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px rgba(59, 195, 243, 0)' },
+					'100%': { boxShadow: '0 0 0 0 rgba(59, 195, 243, 0)' },
 				}
 			},
 			animation: {
@@ -127,6 +132,7 @@ export default {
 				'button-pulse': 'button-pulse 1.5s ease-in-out infinite',
 				'text-flicker': 'text-flicker 4s infinite',
 				'pixel-border': 'pixel-border 2s infinite',
+				'click-pulse': 'click-pulse 0.8s ease-out',
 			},
 		}
 	},

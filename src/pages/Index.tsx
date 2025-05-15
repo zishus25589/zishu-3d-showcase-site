@@ -1,5 +1,5 @@
 
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";

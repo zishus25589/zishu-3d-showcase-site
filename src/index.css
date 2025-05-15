@@ -9,44 +9,44 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 222 47% 14%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 268 95% 76%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 195 100% 60%;
+    --primary-foreground: 240 10% 3.9%;
 
-    --secondary: 156 91% 60%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 200 95% 55%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 217 33% 18%;
     --muted-foreground: 215 20% 70%;
 
-    --accent: 330 95% 76%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 95% 75%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 268 73% 35%;
+    --border: 195 73% 35%;
     --input: 217 33% 20%;
-    --ring: 268 76% 48%;
+    --ring: 195 76% 48%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 255 92% 76%;
-    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-background: 240 10% 3.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 195 100% 60%;
+    --sidebar-primary-foreground: 240 10% 3.9%;
     --sidebar-accent: 217 33% 18%;
-    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 217 33% 20%;
-    --sidebar-ring: 224 76% 48%;
+    --sidebar-ring: 195 76% 48%;
   }
 }
 
@@ -129,5 +129,22 @@
   .neon-border {
     box-shadow: 0 0 10px theme('colors.primary.DEFAULT'),
                inset 0 0 10px theme('colors.primary.DEFAULT');
+  }
+  
+  /* Click animations */
+  @keyframes click-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(59, 195, 243, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(59, 195, 243, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(59, 195, 243, 0);
+    }
+  }
+  
+  .animate-click-pulse:active {
+    animation: click-pulse 0.8s ease-out;
   }
 }

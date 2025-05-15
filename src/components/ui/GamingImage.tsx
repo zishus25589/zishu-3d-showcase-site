@@ -5,9 +5,10 @@ interface GamingImageProps {
   src: string;
   alt: string;
   className?: string;
+  label?: string;
 }
 
-const GamingImage = ({ src, alt, className }: GamingImageProps) => {
+const GamingImage = ({ src, alt, className, label = "DEVELOPER" }: GamingImageProps) => {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
@@ -25,8 +26,8 @@ const GamingImage = ({ src, alt, className }: GamingImageProps) => {
           />
         </div>
       </div>
-      <div className={`absolute -bottom-3 left-1/2 -translate-x-1/2 bg-background px-4 py-1 border-2 border-primary rounded-full transition-all duration-300 ${isHovered ? 'opacity-100' : 'opacity-70'}`}>
-        <span className="text-xs font-gaming text-primary animate-glow">DEVELOPER</span>
+      <div className={`absolute -bottom-3 left-1/2 -translate-x-1/2 bg-background px-4 py-1 border-2 border-primary rounded-full transition-all duration-300 ${isHovered ? 'opacity-100 scale-110' : 'opacity-70'}`}>
+        <span className="text-xs font-gaming text-primary animate-glow">{label}</span>
       </div>
     </div>
   );
