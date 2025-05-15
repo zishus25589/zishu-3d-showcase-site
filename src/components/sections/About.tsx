@@ -71,7 +71,7 @@ const About = () => {
                 
                 <div className="border-l-2 border-primary pl-4 pb-4">
                   <h4 className="font-medium">Web Developer at Creative Agency</h4>
-                  <p className="text-muted-foreground">2019 - 2021</p>
+                  <p className="text-muted-foreground">2024</p>
                   <p className="text-sm text-muted-foreground mt-2">
                     Developed responsive websites and e-commerce solutions for various clients.
                   </p>
@@ -103,7 +103,7 @@ const About = () => {
                 <div className="border-l-2 border-primary pl-4">
                   <h4 className="font-medium">
                 </h4>
-                  <p className="text-muted-foreground">University of Technology</p>
+                  <p className="text-muted-foreground"></p>
                   <p className="text-muted-foreground">
                 </p>
                 </div>
