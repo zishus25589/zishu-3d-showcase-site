@@ -92,8 +92,10 @@ const About = () => {
               
               <div className="space-y-4">
                 <div className="border-l-2 border-primary pl-4 pb-4">
-                  <h4 className="font-medium">Master's in Computer Sc</h4>
-                  <p className="text-muted-foreground">University of Technology</p>
+                  <h4 className="font-medium">
+                </h4>
+                  <p className="text-muted-foreground">
+                </p>
                   <p className="text-muted-foreground">
                 </p>
                 </div>
