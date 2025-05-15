@@ -51,11 +51,7 @@ const About = () => {
               in both frontend and backend technologies, I create scalable, optimized, and
               user-friendly applications.
             </p>
-            <p className="text-muted-foreground">
-              My journey in tech started 5 years ago, and since then I've worked on various
-              projects ranging from e-commerce platforms to real-time communication tools
-              and interactive visualizations.
-            </p>
+            <p className="text-muted-foreground">My journey in tech started 3 years ago, and since then I've worked on various projects ranging from e-commerce platforms to real-time communication tools and interactive visualizations.</p>
             <p className="text-muted-foreground">
               I'm constantly learning and exploring new technologies to enhance my skillset
               and deliver cutting-edge solutions to complex problems.
@@ -91,13 +87,15 @@ const About = () => {
             </div>
             
             <div className="mt-10">
-              <h3 className="text-xl font-medium text-primary mb-4">Education</h3>
+              <h3 className="text-xl font-medium text-primary mb-4">
+            </h3>
               
               <div className="space-y-4">
                 <div className="border-l-2 border-primary pl-4 pb-4">
-                  <h4 className="font-medium">Master's in Computer Science</h4>
+                  <h4 className="font-medium">Master's in Computer Sc</h4>
                   <p className="text-muted-foreground">University of Technology</p>
-                  <p className="text-muted-foreground">2023-2025</p>
+                  <p className="text-muted-foreground">
+                </p>
                 </div>
                 
                 <div className="border-l-2 border-primary pl-4">
