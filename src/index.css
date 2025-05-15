@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -17,24 +18,24 @@
     --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 255 92% 76%;
+    --primary: 268 95% 76%;
     --primary-foreground: 222 47% 11%;
 
-    --secondary: 217 91% 60%;
+    --secondary: 156 91% 60%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217 33% 18%;
     --muted-foreground: 215 20% 70%;
 
-    --accent: 250 95% 76%;
+    --accent: 330 95% 76%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 20%;
+    --border: 268 73% 35%;
     --input: 217 33% 20%;
-    --ring: 224 76% 48%;
+    --ring: 268 76% 48%;
 
     --radius: 0.5rem;
 
@@ -85,5 +86,48 @@
   .canvas-container {
     @apply fixed top-0 left-0 w-full h-screen -z-10;
   }
+  
+  /* Gaming UI Elements */
+  .pixel-border {
+    position: relative;
+    border: 4px solid;
+    @apply border-primary;
+  }
+  
+  .pixel-border::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 2px solid;
+    @apply border-accent animate-pixel-border;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  .gaming-btn {
+    @apply relative overflow-hidden transition-all duration-200 bg-primary hover:bg-primary/90 text-primary-foreground;
+  }
+  
+  .gaming-btn:active {
+    @apply translate-y-1 animate-button-pulse;
+  }
+  
+  .gaming-btn::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 hover:opacity-30 transition-opacity;
+  }
+  
+  /* Glowing elements */
+  .glow-text {
+    text-shadow: 0 0 5px theme('colors.primary.DEFAULT'), 
+                 0 0 10px theme('colors.primary.DEFAULT');
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 10px theme('colors.primary.DEFAULT'),
+               inset 0 0 10px theme('colors.primary.DEFAULT');
+  }
 }
-

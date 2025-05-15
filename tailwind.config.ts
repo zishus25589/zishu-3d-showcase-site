@@ -22,6 +22,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				mono: ['Fira Code', 'monospace'],
+				gaming: ['"Press Start 2P"', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -90,8 +91,8 @@ export default {
 					'50%': { transform: 'translateY(-10px)' },
 				},
 				'glow': {
-					'0%, 100%': { opacity: 1 },
-					'50%': { opacity: 0.6 },
+					'0%, 100%': { opacity: '1', textShadow: '0 0 10px hsl(var(--primary))' },
+					'50%': { opacity: '0.8', textShadow: '0 0 5px hsl(var(--primary))' },
 				},
 				'fade-in': {
 					'0%': { opacity: '0', transform: 'translateY(10px)' },
@@ -100,6 +101,20 @@ export default {
 				'spin-slow': {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' },
+				},
+				'button-pulse': {
+					'0%': { boxShadow: '0 0 0 0 rgba(139, 92, 246, 0.7)' },
+					'70%': { boxShadow: '0 0 0 10px rgba(139, 92, 246, 0)' },
+					'100%': { boxShadow: '0 0 0 0 rgba(139, 92, 246, 0)' },
+				},
+				'text-flicker': {
+					'0%, 100%': { opacity: '1' },
+					'33%': { opacity: '0.9' },
+					'66%': { opacity: '0.95' },
+				},
+				'pixel-border': {
+					'0%, 100%': { boxShadow: '0 0 0 3px hsl(var(--primary))' },
+					'50%': { boxShadow: '0 0 0 5px hsl(var(--accent))' },
 				}
 			},
 			animation: {
@@ -109,6 +124,9 @@ export default {
 				'glow': 'glow 3s ease-in-out infinite',
 				'fade-in': 'fade-in 0.8s ease-out',
 				'spin-slow': 'spin-slow 15s linear infinite',
+				'button-pulse': 'button-pulse 1.5s ease-in-out infinite',
+				'text-flicker': 'text-flicker 4s infinite',
+				'pixel-border': 'pixel-border 2s infinite',
 			},
 		}
 	},

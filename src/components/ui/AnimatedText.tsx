@@ -10,8 +10,16 @@ interface AnimatedTextProps {
 const AnimatedText = ({ text, className, el: Tag = "h1" }: AnimatedTextProps) => {
   return (
     <Tag className={cn("overflow-hidden", className)}>
-      <div className="animate-fade-in">
-        {text}
+      <div className="animate-text-flicker">
+        {text.split('').map((char, index) => (
+          <span 
+            key={index} 
+            className="inline-block hover:text-primary hover:scale-110 transition-all duration-200"
+            style={{ animationDelay: `${index * 0.05}s` }}
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        ))}
       </div>
     </Tag>
   );
