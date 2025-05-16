@@ -1,7 +1,7 @@
 
 import SectionHeading from "../ui/SectionHeading";
 import SkillBadge from "../ui/SkillBadge";
-import { Python } from "lucide-react";
+import { CircleDot } from "lucide-react";
 
 const skills = [{
   name: "JavaScript",
@@ -30,7 +30,7 @@ const skills = [{
 }, {
   name: "Python",
   level: 88,
-  icon: <Python className="w-4 h-4 text-blue-400" />
+  icon: <CircleDot className="w-4 h-4 text-blue-400" />
 }, {
   name: "MongoDB",
   level: 75

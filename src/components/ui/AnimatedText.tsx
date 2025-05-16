@@ -14,7 +14,7 @@ const AnimatedText = ({ text, className, el: Tag = "h1" }: AnimatedTextProps) =>
       <div className="animate-text-flicker">
         {text.split('').map((char, index) => (
           <span 
-            key={index} 
+            key={`char-${index}`}
             className="inline-block hover:text-primary hover:scale-110 transition-all duration-200"
             style={{ animationDelay: `${index * 0.05}s` }}
           >

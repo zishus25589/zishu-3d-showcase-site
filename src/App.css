@@ -84,3 +84,26 @@
   transform: scale(3);
   opacity: 1;
 }
+
+/* Text flicker animation for AnimatedText component */
+@keyframes text-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  8%, 10% {
+    opacity: 0.8;
+  }
+  20%, 22% {
+    opacity: 1;
+  }
+  38%, 40% {
+    opacity: 0.9;
+  }
+  78%, 80% {
+    opacity: 0.7;
+  }
+}
+
+.animate-text-flicker {
+  animation: text-flicker 6s infinite;
+}
