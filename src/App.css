@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,47 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* 120Hz Smooth animations */
+@property --smooth-rotate {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.smooth-rotate {
+  animation: smooth-rotate 2s linear infinite;
+  --smooth-rotate: 0deg;
+  transform: rotate(var(--smooth-rotate));
+}
+
+@keyframes smooth-rotate {
+  to {
+    --smooth-rotate: 360deg;
+  }
+}
+
+/* Cool click effects */
+.click-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.click-ripple::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(59, 195, 243, 0.4) 0%, transparent 70%);
+  transform: scale(0);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.click-ripple:active::after {
+  transform: scale(3);
+  opacity: 1;
 }

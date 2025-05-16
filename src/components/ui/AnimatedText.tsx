@@ -1,5 +1,6 @@
 
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
 interface AnimatedTextProps {
   text: string;

@@ -1,5 +1,8 @@
+
 import SectionHeading from "../ui/SectionHeading";
 import SkillBadge from "../ui/SkillBadge";
+import { Python } from "lucide-react";
+
 const skills = [{
   name: "JavaScript",
   level: 95
@@ -25,6 +28,10 @@ const skills = [{
   name: "Tailwind CSS",
   level: 95
 }, {
+  name: "Python",
+  level: 88,
+  icon: <Python className="w-4 h-4 text-blue-400" />
+}, {
   name: "MongoDB",
   level: 75
 }, {
@@ -37,6 +44,7 @@ const skills = [{
   name: "Docker",
   level: 70
 }];
+
 const About = () => {
   return <section id="about" className="section-padding bg-muted/10">
       <div className="container mx-auto px-4">
@@ -83,7 +91,7 @@ const About = () => {
           <div>
             <h3 className="text-xl font-medium text-primary mb-4">My Skills</h3>
             <div className="flex flex-wrap gap-3">
-              {skills.map(skill => <SkillBadge key={skill.name} name={skill.name} level={skill.level} />)}
+              {skills.map(skill => <SkillBadge key={skill.name} name={skill.name} level={skill.level} icon={skill.icon} />)}
             </div>
             
             <div className="mt-10">
