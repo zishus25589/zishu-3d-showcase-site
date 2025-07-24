@@ -15,11 +15,11 @@ const projectsData = [
   },
   {
     title: "Real-Time Chat Application",
-    description: "WebSocket-based chat application with real-time messaging, read receipts, and media sharing.",
-    technologies: ["React", "Socket.io", "Node.js", "TypeScript"],
+    description: "PubNub-powered chat application with real-time messaging, presence, and user management.",
+    technologies: ["React", "PubNub", "TypeScript", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     githubUrl: "#",
-    liveUrl: "#",
+    liveUrl: "/chat",
   },
   {
     title: "AI Content Generator",

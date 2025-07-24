@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import AnimatedText from "../ui/AnimatedText";
+// import AnimatedText from "../ui/AnimatedText";
 import GamingImage from "../ui/GamingImage";
 import { Gamepad2, Sparkles } from "lucide-react";
 
@@ -11,11 +11,9 @@ const Hero = () => {
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <div className="mb-6 text-left">
             <p className="text-primary mb-2 font-gaming text-xs tracking-widest animate-pulse">READY PLAYER ONE</p>
-            <AnimatedText
-              text="Zishu"
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 glow-text"
-              el="h1"
-            />
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 glow-text">
+              Zishu
+            </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-semibold">
               I build <span className="gradient-text animate-text-flicker">exceptional</span> experiences
             </h2>
